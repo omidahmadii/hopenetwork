@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.html import format_html
 from extensions.utils import jalali_converter
 
 
@@ -61,7 +62,9 @@ class Article(models.Model):
 
     def category_published(self):
         return self.category.filter(status=True)
-    def thumbnail_tag(self):
-        return "<img src='{}'>".format(self.thumbnail.url)
 
+    def thumbnail_tag(self):
+        return format_html("<img width=100 height= 75 style='border-radius: 5px;' src='{}'>".format(self.thumbnail.url))
+
+    thumbnail_tag.short_description = "تصویر"
     objects = ArticleManager()
