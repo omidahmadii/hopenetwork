@@ -61,4 +61,7 @@ class Article(models.Model):
 
     def category_published(self):
         return self.category.filter(status=True)
+    def thumbnail_tag(self):
+        return "<img src='{}'>".format(self.thumbnail.url)
+
     objects = ArticleManager()
