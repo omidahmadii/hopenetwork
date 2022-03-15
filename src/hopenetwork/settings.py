@@ -117,6 +117,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/django-project/hopenetwork/site/public/static/'
+#STATIC_ROOT = BASE_DIR / '../site/public/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
