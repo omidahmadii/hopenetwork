@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog.apps.BlogConfig',
+    'extensions',
 ]
 
 MIDDLEWARE = [
@@ -131,12 +133,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/django-project/hopenetwork/site/public/static/'
-#STATIC_ROOT = BASE_DIR / '../site/public/static/'
+#STATIC_ROOT = '/django-project/hopenetwork/site/public/static/'
+STATIC_ROOT = BASE_DIR / '../site/public/static/'
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = '/django-project/hopenetwork/site/public/media/'
-#MEDIA_ROOT = BASE_DIR / '../site/public/media/'
+#MEDIA_ROOT = '/django-project/hopenetwork/site/public/media/'
+MEDIA_ROOT = BASE_DIR / '../site/public/media/'
 
 
 
