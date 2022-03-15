@@ -134,6 +134,12 @@ STATIC_URL = 'static/'
 STATIC_ROOT = '/django-project/hopenetwork/site/public/static/'
 #STATIC_ROOT = BASE_DIR / '../site/public/static/'
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = '/django-project/hopenetwork/site/public/media/'
+#MEDIA_ROOT = BASE_DIR / '../site/public/media/'
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
