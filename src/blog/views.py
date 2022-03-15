@@ -10,14 +10,15 @@ class ArticleList(ListView):
     #     context = {
     #         "articles": articles # It Changed to Somting like "object_list" : page_obj
     #     }
-    template_name = 'blog/home.html' # default article_list
+    #template_name = 'blog/article_list.html' # default article_list
     queryset = Article.objects.published()
     paginate_by = 2
 
 
 
 class ArticleDetail(DetailView):
-    template_name = 'blog/detail.html' # Default is article_detail.html
+
+    #template_name = 'blog/article_detail.html' # Default is article_detail.html
 
     def get_object(self):
         slug = self.kwargs.get('slug')   # keyword Arguments
@@ -29,7 +30,7 @@ class ArticleDetail(DetailView):
 
 class CategoryList(ListView):
     paginate_by = 2
-    template_name = 'blog/category.html'  # default article_list
+    #template_name = 'blog/category_list.html'  # default article_list
 
     def get_queryset(self):
         global category
@@ -47,7 +48,7 @@ class CategoryList(ListView):
 #     context = {
 #         'article': get_object_or_404(Article, slug=slug, status='p')
 #     }
-#     return render(request, 'blog/detail.html', context)
+#     return render(request, 'blog/article_detail.html', context)
 
 
 # def home(request, page=1):
@@ -57,7 +58,7 @@ class CategoryList(ListView):
 #     context = {
 #         "articles": articles
 #     }
-#     return render(request, 'blog/home.html', context)
+#     return render(request, 'blog/article_list.html', context)
 
 
 def category(request, slug, page=1):
@@ -70,4 +71,4 @@ def category(request, slug, page=1):
         'articles': articles,
         'category': category
     }
-    return render(request, 'blog/category.html', context)
+    return render(request, 'blog/category_list.html', context)

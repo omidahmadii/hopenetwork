@@ -3,6 +3,12 @@ from .models import Article, Category
 from django.contrib import messages
 from django.utils.translation import ngettext
 
+# Admin Header Change
+
+admin.site.site_header = 'وبلاگ'
+
+
+
 
 @admin.action(description='انتشار مقالات انتخاب شده ')
 def make_published(modeladmin, request, queryset):
@@ -44,7 +50,7 @@ class ArticleAdmin(admin.ModelAdmin):
     actions = [make_published, make_draft]
 
     def category_to_str(self, obj):
-        return ", ".join([category.title for category in obj.category_published()])
+        return ", ".join([category.title for category in obj.category.active()])
 
     category_to_str.short_description = "دسته بندی"
 
