@@ -30,7 +30,7 @@ class ArticleDetail(DetailView):
 
 class CategoryList(ListView):
     paginate_by = 2
-    #template_name = 'blog/category_list.html'  # default article_list
+    #template_name = 'blog/list.html'  # default article_list
 
     def get_queryset(self):
         global category
@@ -71,4 +71,4 @@ def category(request, slug, page=1):
         'articles': articles,
         'category': category
     }
-    return render(request, 'blog/category_list.html', context)
+    return render(request, 'blog/list.html', context)
