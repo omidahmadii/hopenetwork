@@ -349,3 +349,94 @@
 [Tue Mar 15 11:04:10.192831 2022] [wsgi:error] [pid 809976] [remote 46.28.73.122:31930]     raise new from exc
 [Tue Mar 15 11:04:10.192845 2022] [wsgi:error] [pid 809976] [remote 46.28.73.122:31930] django.template.exceptions.TemplateDoesNotExist: blog/base.html 
 [Tue Mar 15 11:04:10.351667 2022] [wsgi:error] [pid 809976] [remote 46.28.73.122:31931] Not Found: /favicon.ico
+[Tue Mar 15 11:16:35.068235 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32084] Not Found: /assets/favicon.ico
+[Tue Mar 15 11:16:39.012202 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] Not Found: /media/images/3389dec93bebb6f44619d529ba79efff.jpg
+[Tue Mar 15 11:16:39.232506 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] Not Found: /article/assets/favicon.ico
+[Tue Mar 15 11:16:42.387141 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] Internal Server Error: /category/mikrotik
+[Tue Mar 15 11:16:42.387203 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] Traceback (most recent call last):
+[Tue Mar 15 11:16:42.387219 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+[Tue Mar 15 11:16:42.387234 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return self.template.render(context)
+[Tue Mar 15 11:16:42.387248 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+[Tue Mar 15 11:16:42.387263 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return self._render(context)
+[Tue Mar 15 11:16:42.387277 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+[Tue Mar 15 11:16:42.387292 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return self.nodelist.render(context)
+[Tue Mar 15 11:16:42.387306 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 1000, in render
+[Tue Mar 15 11:16:42.387321 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return SafeString("".join([node.render_annotated(context) for node in self]))
+[Tue Mar 15 11:16:42.387364 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 1000, in <listcomp>
+[Tue Mar 15 11:16:42.387379 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return SafeString("".join([node.render_annotated(context) for node in self]))
+[Tue Mar 15 11:16:42.387393 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 958, in render_annotated
+[Tue Mar 15 11:16:42.387408 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return self.render(context)
+[Tue Mar 15 11:16:42.387422 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 132, in render
+[Tue Mar 15 11:16:42.387436 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     compiled_parent = self.get_parent(context)
+[Tue Mar 15 11:16:42.387451 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 129, in get_parent
+[Tue Mar 15 11:16:42.387465 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return self.find_template(parent, context)
+[Tue Mar 15 11:16:42.387479 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 107, in find_template
+[Tue Mar 15 11:16:42.387494 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     template, origin = context.template.engine.find_template(
+[Tue Mar 15 11:16:42.387508 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/engine.py", line 162, in find_template
+[Tue Mar 15 11:16:42.387523 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     raise TemplateDoesNotExist(name, tried=tried)
+[Tue Mar 15 11:16:42.387537 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] django.template.exceptions.TemplateDoesNotExist: blog/base.html 
+[Tue Mar 15 11:16:42.387551 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] 
+[Tue Mar 15 11:16:42.387565 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] The above exception was the direct cause of the following exception:
+[Tue Mar 15 11:16:42.387579 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] 
+[Tue Mar 15 11:16:42.387593 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] Traceback (most recent call last):
+[Tue Mar 15 11:16:42.387607 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+[Tue Mar 15 11:16:42.387622 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     response = get_response(request)
+[Tue Mar 15 11:16:42.387636 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+[Tue Mar 15 11:16:42.387651 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     response = response.render()
+[Tue Mar 15 11:16:42.387665 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+[Tue Mar 15 11:16:42.387679 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     self.content = self.rendered_content
+[Tue Mar 15 11:16:42.387693 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/response.py", line 92, in rendered_content
+[Tue Mar 15 11:16:42.387708 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     return template.render(context, self._request)
+[Tue Mar 15 11:16:42.387743 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 64, in render
+[Tue Mar 15 11:16:42.387757 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     reraise(exc, self.backend)
+[Tue Mar 15 11:16:42.387772 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 85, in reraise
+[Tue Mar 15 11:16:42.387786 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087]     raise new from exc
+[Tue Mar 15 11:16:42.387800 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32087] django.template.exceptions.TemplateDoesNotExist: blog/base.html 
+[Tue Mar 15 11:16:44.681935 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32088] Not Found: /favicon.ico
+[Tue Mar 15 11:16:51.293526 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] Internal Server Error: /category/virtualization
+[Tue Mar 15 11:16:51.293594 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] Traceback (most recent call last):
+[Tue Mar 15 11:16:51.293610 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+[Tue Mar 15 11:16:51.293625 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return self.template.render(context)
+[Tue Mar 15 11:16:51.293640 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+[Tue Mar 15 11:16:51.293654 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return self._render(context)
+[Tue Mar 15 11:16:51.293668 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+[Tue Mar 15 11:16:51.293682 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return self.nodelist.render(context)
+[Tue Mar 15 11:16:51.293696 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 1000, in render
+[Tue Mar 15 11:16:51.293711 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return SafeString("".join([node.render_annotated(context) for node in self]))
+[Tue Mar 15 11:16:51.293725 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 1000, in <listcomp>
+[Tue Mar 15 11:16:51.293739 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return SafeString("".join([node.render_annotated(context) for node in self]))
+[Tue Mar 15 11:16:51.293754 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/base.py", line 958, in render_annotated
+[Tue Mar 15 11:16:51.293768 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return self.render(context)
+[Tue Mar 15 11:16:51.293782 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 132, in render
+[Tue Mar 15 11:16:51.293796 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     compiled_parent = self.get_parent(context)
+[Tue Mar 15 11:16:51.293810 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 129, in get_parent
+[Tue Mar 15 11:16:51.293825 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return self.find_template(parent, context)
+[Tue Mar 15 11:16:51.293839 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 107, in find_template
+[Tue Mar 15 11:16:51.293853 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     template, origin = context.template.engine.find_template(
+[Tue Mar 15 11:16:51.293903 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/engine.py", line 162, in find_template
+[Tue Mar 15 11:16:51.293918 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     raise TemplateDoesNotExist(name, tried=tried)
+[Tue Mar 15 11:16:51.293931 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] django.template.exceptions.TemplateDoesNotExist: blog/base.html 
+[Tue Mar 15 11:16:51.293946 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] 
+[Tue Mar 15 11:16:51.293959 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] The above exception was the direct cause of the following exception:
+[Tue Mar 15 11:16:51.293973 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] 
+[Tue Mar 15 11:16:51.293987 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] Traceback (most recent call last):
+[Tue Mar 15 11:16:51.294001 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+[Tue Mar 15 11:16:51.294015 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     response = get_response(request)
+[Tue Mar 15 11:16:51.294029 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+[Tue Mar 15 11:16:51.294044 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     response = response.render()
+[Tue Mar 15 11:16:51.294057 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+[Tue Mar 15 11:16:51.294072 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     self.content = self.rendered_content
+[Tue Mar 15 11:16:51.294086 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/response.py", line 92, in rendered_content
+[Tue Mar 15 11:16:51.294100 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     return template.render(context, self._request)
+[Tue Mar 15 11:16:51.294114 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 64, in render
+[Tue Mar 15 11:16:51.294128 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     reraise(exc, self.backend)
+[Tue Mar 15 11:16:51.294142 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]   File "/django-project/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 85, in reraise
+[Tue Mar 15 11:16:51.294156 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089]     raise new from exc
+[Tue Mar 15 11:16:51.294170 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32089] django.template.exceptions.TemplateDoesNotExist: blog/base.html 
+[Tue Mar 15 11:17:36.889591 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32090] Not Found: /media/images/3389dec93bebb6f44619d529ba79efff.jpg
+[Tue Mar 15 11:17:36.990833 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32090] Not Found: /article/assets/favicon.ico
+[Tue Mar 15 11:17:38.396910 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32105] Not Found: /category/assets/favicon.ico
+[Tue Mar 15 11:17:56.652141 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32162] Not Found: /assets/favicon.ico
+[Tue Mar 15 11:17:58.325425 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32164] Not Found: /media/images/3389dec93bebb6f44619d529ba79efff.jpg
+[Tue Mar 15 11:17:58.419295 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32164] Not Found: /article/assets/favicon.ico
+[Tue Mar 15 11:18:00.316578 2022] [wsgi:error] [pid 810444] [remote 46.28.73.122:32164] Not Found: /assets/favicon.ico
