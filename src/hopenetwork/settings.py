@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'Django_Hopenetwork',
         'USER': 'omid',
         'PASSWORD': '#Kent228mud120',
-        'HOST': 'localhost',
+        'HOST': 'hopenetwork.ir',
         'PORT': '3306',
 
     }
