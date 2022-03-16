@@ -1,24 +1,26 @@
 {% load static %}
 <head>
-  <title>Login/Sign Up Form</title>
+  <title>ورود و ثبت نام</title>
     <link rel="stylesheet" type="text/css" href="{% static 'registration/login/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/login/rtl.css' %}">
+
 </head>
 <body>
   <div class="container" id="container">
     <!-- sign in page -->
     <div class="form-container sign-in-container">
       <form method="POST" action="#" class="form" id="login">
-        <h1 class="form__title">Login</h1>
+        <h1 class="form__title">ورود</h1>
         <div class="form__input-group">
-          <label for="username">Username: </label>
+          <label for="username">نام کاربری: </label>
           <input type="text" class="form__input" name="username" id="username" maxlength="20" required> 
         </div>
         <div class="form__input-group">
-          <label for="pass">Password: </label>
+          <label for="pass">رمز عبور: </label>
           <input type="password" class="form__input" name="pass" id="pass" maxlength="20" required> 
         </div>
         <div class="form__input-group">
-          <button type="submit" class="form__button">Submit</button>
+          <button type="submit" class="form__button">ورود</button>
         </div>
      </form>
     </div>
@@ -26,30 +28,30 @@
    <!--  create account page -->
    <div class="form-container sign-up-container">
      <form method="POST" action="#" class="form" id="register">
-       <h1 class="form__title">Register</h1>
+       <h1 class="form__title">ثبت نام</h1>
        <div class="form__input-group">
-         <label for="username"> Username: </label>
+         <label for="username"> نام کاربری: </label>
          <input type="text" class="form__input" name="username" id="username" maxlength="20" required>
        </div>
         <div class="form__input-group">
-          <label for="pass">Password: </label>
+          <label for="pass">رمز عبور: </label>
           <input type="password" class="form__input" name="pass" id="pass" maxlength="20" required> 
         </div>
-       <button class="form__button" type="submit">Submit</button>
+       <button class="form__button" type="submit">ثبت نام</button>
      </form>
    </div> 
     
    <div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>Please login with your personal info</p>
+				<h1>خوش آمدید!</h1>
+				<p>لطفا بااطلاعات کاربری خود وارد شوید.</p>
 				<button class="ghost" id="signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<h1>سلام!</h1>
+				<p>اطلاعات خود را وارد و در سایت ثبت نام نمایید</p>
+				<button class="ghost" id="signUp">ثبت نام</button>
 			</div>
 		</div>
 	</div>
