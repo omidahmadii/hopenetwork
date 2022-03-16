@@ -27,15 +27,17 @@
 
    <!--  create account page -->
    <div class="form-container sign-up-container">
-     <form method="POST" action="#" class="form" id="register">
+     <form method="POST" action="#" class="form" id="register">{% csrf_token %}
        <h1 class="form__title">ثبت نام</h1>
        <div class="form__input-group">
          <label for="username"> نام کاربری</label>
-         <input type="text" class="form__input" name="username" id="username" maxlength="20" required>
+<!--         <input type="text" class="form__input" name="username" id="username" maxlength="20" required>-->
+           {{ form.username }}
        </div>
         <div class="form__input-group">
           <label for="pass">رمز عبور</label>
-          <input type="password" class="form__input" name="pass" id="pass" maxlength="20" required>
+<!--          <input type="password" class="form__input" name="pass" id="pass" maxlength="20" required>-->
+            {{ form.password }}
         </div>
        <button class="form__button" type="submit">ثبت نام</button>
      </form>
