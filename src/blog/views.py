@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.models import User
 from .models import Article, Category
 from django.views.generic import ListView, DetailView
 
@@ -25,9 +26,6 @@ class ArticleDetail(DetailView):
         return get_object_or_404(Article, slug=slug, status='p')
 
 
-
-
-
 class CategoryList(ListView):
     paginate_by = 2
     #template_name = 'blog/list.html'  # default article_list
@@ -41,6 +39,22 @@ class CategoryList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['category']= category
+        return context
+
+
+class AuthorList(ListView):
+    paginate_by = 2
+    #template_name = 'blog/list.html'  # default article_list
+
+    def get_queryset(self):
+        global author
+        username = self.kwargs.get('username')  # keyword Arguments
+        author = get_object_or_404(User, username=username)
+        return author.articles.published()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['author'] = author
         return context
 
 
@@ -61,14 +75,15 @@ class CategoryList(ListView):
 #     return render(request, 'blog/article_list.html', context)
 
 
-def category(request, slug, page=1):
-    category = get_object_or_404(Category, slug=slug, status=True)
-    article_list = category.articles.published()
-    paginator = Paginator(article_list, 2)  # Show 5 article per page.
-    articles = paginator.get_page(page)
-    context = {
-
-        'articles': articles,
-        'category': category
-    }
-    return render(request, 'blog/list.html', context)
+# def category(request, slug, page=1):
+#     category = get_object_or_404(Category, slug=slug, status=True)
+#     article_list = category.articles.published()
+#     paginator = Paginator(article_list, 2)  # Show 5 article per page.
+#     articles = paginator.get_page(page)
+#     context = {
+#
+#         'articles': articles,
+#         'category': category
+#     }
+#     return render(request, 'blog/list.html', context)
+#
