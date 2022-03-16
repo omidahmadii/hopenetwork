@@ -88,9 +88,6 @@ DATABASES = {
 
     }
 }
-
-
-
 """
 DATABASES = {
     'default': {
