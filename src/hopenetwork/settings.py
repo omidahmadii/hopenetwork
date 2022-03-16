@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'blog.apps.BlogConfig',
+    'account.apps.AccountConfig',
     'extensions',
 ]
 
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'blog/templates',
+            BASE_DIR / '../site/public/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
